@@ -47,6 +47,12 @@ const MainContent = () => {
 
 	return (
 		<section className='w-fit mx-auto space-y-4 h-fit'>
+			<p className='text-lg font-medium text-slate-500 text-center'>
+				Viewing Page:{' '}
+				<span className='text-slate-700'>
+					{page} / {totalPages}
+				</span>
+			</p>
 			<div className='space-x-4 w-fit mx-auto'>
 				<button
 					disabled={page <= 1}
