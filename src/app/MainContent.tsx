@@ -23,10 +23,10 @@ const MainContent = () => {
 		const fetchData = async () => {
 			const res = await Promise.allSettled([
 				fetch(
-					`http://localhost:3000/api/users/totalPages?itemsPerPage=${itemsPerPage}`
+					`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/users/totalPages?itemsPerPage=${itemsPerPage}`
 				),
 				fetch(
-					`http://localhost:3000/api/users?page=${page}&itemsPerPage=${itemsPerPage}`
+					`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/users?page=${page}&itemsPerPage=${itemsPerPage}`
 				),
 			])
 
