@@ -15,8 +15,8 @@ interface User {
 
 const MainContent = () => {
 	const [items, setItems] = useState<User[]>([])
-	const [itemsPerPage] = useState(10)
 	const [page, setPage] = useState(1)
+	const [itemsPerPage] = useState(10)
 	const [totalPages, setTotalPages] = useState<number>()
 
 	useEffect(() => {
@@ -37,7 +37,6 @@ const MainContent = () => {
 				])
 
 				setTotalPages(data[0].totalPages)
-				console.log(data[1])
 				setItems(data[1])
 			}
 		}
